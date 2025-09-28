@@ -1,0 +1,116 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta">
+            <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+                📅 {{ page.date | date: "%Y年%m月%d日" }}
+            </time>
+            {% if page.author %}
+            <span class="post-author">👤 {{ page.author }}</span>
+            {% endif %}
+            {% if page.categories %}
+            <div class="post-categories">
+                🏷️ 
+                {% for category in page.categories %}
+                <span class="category">{{ category }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if page.tags %}
+            <div class="post-tags">
+                🔖 
+                {% for tag in page.tags %}
+                <span class="tag">#{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-navigation">
+            {% if page.previous.url %}
+            <div class="nav-previous">
+                <a href="{{ page.previous.url }}" rel="prev">
+                    <span class="nav-label">← 上一篇</span>
+                    <span class="nav-title">{{ page.previous.title }}</span>
+                </a>
+            </div>
+            {% endif %}
+            
+            {% if page.next.url %}
+            <div class="nav-next">
+                <a href="{{ page.next.url }}" rel="next">
+                    <span class="nav-label">下一篇 →</span>
+                    <span class="nav-title">{{ page.next.title }}</span>
+                </a>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="post-share">
+            <h4>分享这篇文章</h4>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}" 
+                   target="_blank" class="share-twitter">Twitter</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" 
+                   target="_blank" class="share-facebook">Facebook</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" 
+                   target="_blank" class="share-linkedin">LinkedIn</a>
+                <button onclick="copyToClipboard('{{ page.url | absolute_url }}')" class="share-copy">复制链接</button>
+            </div>
+        </div>
+
+        <!-- 评论区 -->
+        <div class="post-comments">
+            <div id="gitalk-container"></div>
+        </div>
+    </footer>
+</article>
+
+<!-- 相关文章推荐 -->
+<section class="related-posts">
+    <h3>相关文章</h3>
+    <div class="related-posts-grid">
+        {% assign related_posts = site.related_posts | limit: 3 %}
+        {% for post in related_posts %}
+        <article class="related-post">
+            <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+            <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+            <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<script>
+// 复制链接功能
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        alert('链接已复制到剪贴板！');
+    });
+}
+
+// Gitalk 评论系统配置
+const gitalk = new Gitalk({
+    clientID: '{{ site.gitalk.client_id }}',
+    clientSecret: '{{ site.gitalk.client_secret }}',
+    repo: '{{ site.gitalk.repo }}',
+    owner: '{{ site.gitalk.owner }}',
+    admin: ['{{ site.gitalk.admin }}'],
+    id: '{{ page.url | truncate: 50, "" }}',
+    distractionFreeMode: false
+});
+
+if (document.getElementById('gitalk-container')) {
+    gitalk.render('gitalk-container');
+}
+</script>

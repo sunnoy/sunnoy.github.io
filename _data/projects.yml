@@ -1,0 +1,145 @@
+featured:
+  - title: "智能项目管理系统"
+    description: "基于 React 和 Node.js 的全栈项目管理平台，支持团队协作、任务跟踪和实时通信。"
+    image: "/assets/images/projects/project-manager.jpg"
+    demo_url: "https://project-demo.example.com"
+    github_url: "https://github.com/sunnoy/project-manager"
+    tech_stack:
+      - "React 18"
+      - "TypeScript"
+      - "Node.js"
+      - "MongoDB"
+      - "Socket.io"
+      - "Docker"
+    features:
+      - "实时协作和通知"
+      - "甘特图和看板视图"
+      - "文件共享和版本控制"
+      - "数据分析和报表"
+      - "移动端适配"
+    status: "已完成"
+    year: 2024
+
+  - title: "智能天气预报应用"
+    description: "使用 Vue.js 开发的现代化天气应用，提供精准预报和生活建议。"
+    image: "/assets/images/projects/weather-app.jpg"
+    demo_url: "https://weather-app.example.com"
+    github_url: "https://github.com/sunnoy/weather-app"
+    tech_stack:
+      - "Vue 3"
+      - "Composition API"
+      - "Pinia"
+      - "Element Plus"
+      - "PWA"
+    features:
+      - "全球城市天气查询"
+      - "7天详细预报"
+      - "生活指数建议"
+      - "PWA 支持"
+      - "暗黑模式"
+    status: "已完成"
+    year: 2024
+
+  - title: "个人技术博客系统"
+    description: "基于 Jekyll 的静态博客系统，专注于技术文章分享和知识管理。"
+    image: "/assets/images/projects/blog-system.jpg"
+    demo_url: "https://sunnoy.github.io"
+    github_url: "https://github.com/sunnoy/sunnoy.github.io"
+    tech_stack:
+      - "Jekyll"
+      - "Liquid"
+      - "Sass"
+      - "JavaScript"
+      - "GitHub Pages"
+    features:
+      - "响应式设计"
+      - "代码高亮"
+      - "评论系统"
+      - "搜索功能"
+      - "SEO 优化"
+    status: "进行中"
+    year: 2025
+
+other:
+  - title: "React 组件库"
+    description: "企业级 React 组件库，提供丰富的 UI 组件和工具函数。"
+    github_url: "https://github.com/sunnoy/react-components"
+    tech_stack:
+      - "React"
+      - "TypeScript"
+      - "Storybook"
+      - "Jest"
+    status: "开发中"
+    year: 2025
+
+  - title: "API 文档生成器"
+    description: "自动化 API 文档生成工具，支持多种编程语言和框架。"
+    github_url: "https://github.com/sunnoy/api-doc-generator"
+    tech_stack:
+      - "Node.js"
+      - "Express"
+      - "Swagger"
+      - "Markdown"
+    status: "计划中"
+    year: 2025
+
+  - title: "代码质量检查工具"
+    description: "集成多种代码质量检查工具的 CLI 应用，提升代码质量。"
+    github_url: "https://github.com/sunnoy/code-quality-checker"
+    tech_stack:
+      - "Node.js"
+      - "ESLint"
+      - "Prettier"
+      - "TypeScript"
+    status: "已完成"
+    year: 2023
+
+  - title: "数据可视化仪表板"
+    description: "企业数据可视化平台，支持多种图表类型和实时数据展示。"
+    github_url: "https://github.com/sunnoy/data-dashboard"
+    tech_stack:
+      - "Vue.js"
+      - "D3.js"
+      - "ECharts"
+      - "WebSocket"
+    status: "已完成"
+    year: 2023
+
+  - title: "微服务架构模板"
+    description: "基于 Docker 和 Kubernetes 的微服务架构模板项目。"
+    github_url: "https://github.com/sunnoy/microservice-template"
+    tech_stack:
+      - "Docker"
+      - "Kubernetes"
+      - "Node.js"
+      - "Redis"
+      - "PostgreSQL"
+    status: "已完成"
+    year: 2023
+
+open_source:
+  - title: "Vue.js 贡献"
+    description: "为 Vue.js 核心库贡献代码，修复 bug 和优化性能。"
+    github_url: "https://github.com/vuejs/vue"
+    contributions:
+      - "修复路由守卫的边界情况"
+      - "优化 TypeScript 类型定义"
+      - "改进文档和示例"
+    year: 2024
+
+  - title: "React 生态贡献"
+    description: "参与 React 生态系统的开源项目，提供功能改进和 bug 修复。"
+    github_url: "https://github.com/facebook/react"
+    contributions:
+      - "添加新的模板选项"
+      - "修复组件样式问题"
+      - "优化构建性能"
+    year: 2024
+
+  - title: "开发工具贡献"
+    description: "为各种开发工具贡献代码，提升开发者体验。"
+    contributions:
+      - "Webpack 性能优化"
+      - "ESLint 规则改进"
+      - "Prettier 格式化优化"
+    year: 2023-2024

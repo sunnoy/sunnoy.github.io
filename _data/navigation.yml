@@ -1,0 +1,65 @@
+main:
+  - title: "首页"
+    url: "/"
+    icon: "🏠"
+    description: "网站主页"
+  
+  - title: "关于我"
+    url: "/about.html"
+    icon: "👤"
+    description: "个人简介和经历"
+  
+  - title: "项目"
+    url: "/projects.html"
+    icon: "🚀"
+    description: "项目作品展示"
+  
+  - title: "博客"
+    url: "/blog.html"
+    icon: "📝"
+    description: "技术文章和学习笔记"
+  
+  - title: "联系"
+    url: "/contact.html"
+    icon: "📞"
+    description: "联系方式和社交媒体"
+
+footer:
+  - title: "快速链接"
+    links:
+      - title: "首页"
+        url: "/"
+      - title: "关于我"
+        url: "/about.html"
+      - title: "项目展示"
+        url: "/projects.html"
+      - title: "技术博客"
+        url: "/blog.html"
+      - title: "联系我"
+        url: "/contact.html"
+  
+  - title: "技术栈"
+    links:
+      - title: "前端开发"
+        url: "/blog.html#frontend"
+      - title: "后端开发"
+        url: "/blog.html#backend"
+      - title: "开发工具"
+        url: "/blog.html#tools"
+      - title: "学习资源"
+        url: "/blog.html#resources"
+  
+  - title: "社交媒体"
+    links:
+      - title: "GitHub"
+        url: "https://github.com/sunnoy"
+        external: true
+      - title: "Twitter"
+        url: "https://twitter.com/your_twitter"
+        external: true
+      - title: "LinkedIn"
+        url: "https://linkedin.com/in/your-linkedin"
+        external: true
+      - title: "知乎"
+        url: "https://zhihu.com/people/yourprofile"
+        external: t I’m rue

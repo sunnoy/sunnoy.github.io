@@ -1,3 +1,225 @@
+# 网站基本信息
+title: "Sunnoy's Tech Blog"
+description: "一个专注于技术分享和学习的个人博客，记录前端开发、后端技术、项目经验和学习心得。"
+baseurl: ""
+url: "https://sunnoy.github.io"
+
+# 作者信息
+author:
+  name: "Sunnoy"
+  email: "your-email@example.com"
+  bio: "全栈开发工程师，热爱技术分享和开源贡献"
+  avatar: "/assets/images/avatar.jpg"
+  location: "中国·上海"
+
+# 社交媒体链接
+social:
+  github: "sunnoy"
+  twitter: "your_twitter"
+  linkedin: "your-linkedin"
+  email: "your-email@example.com"
+  wechat: "your-wechat-id"
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
 theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# 分页设置
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# 代码高亮设置
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# SEO 设置
+lang: zh-CN
+timezone: Asia/Shanghai
+
+# 评论系统 (Gitalk)
+gitalk:
+  enable: true
+  client_id: "your_github_app_client_id"
+  client_secret: "your_github_app_client_secret"
+  repo: "sunnoy.github.io"
+  owner: "sunnoy"
+  admin: "sunnoy"
+
+# Google Analytics
+google_analytics: "G-XXXXXXXXXX"
+
+# 网站图标
+favicon: "/assets/images/favicon.ico"
+
+# 导航菜单
+navigation:
+  - title: "首页"
+    url: "/"
+    icon: "🏠"
+  - title: "关于我"
+    url: "/about.html"
+    icon: "👤"
+  - title: "项目"
+    url: "/projects.html"
+    icon: "🚀"
+  - title: "博客"
+    url: "/blog.html"
+    icon: "📝"
+  - title: "联系"
+    url: "/contact.html"
+    icon: "📞"
+
+# 文章设置
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Sunnoy"
+      show_excerpts: true
+      comments: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - .gitignore
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# 包含文件
+include:
+  - _pages
+  - .htaccess
+
+# 集合设置
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# 压缩设置
+sass:
+  style: compressed
+
+# 安全设置
+safe: true
+incremental: false
+
+# 开发设置
+livereload: true
+open_url: true
+
+# RSS Feed 设置
+feed:
+  posts_limit: 20
+  excerpt_only: true
+
+# 站点地图设置
+sitemap:
+  changefreq: weekly
+  priority: 0.7
+
+# 性能优化
+future: false
+unpublished: false
+limit_posts: 0
+
+# 自定义变量
+custom:
+  # 网站统计
+  analytics:
+    enable: true
+    provider: "google"
+  
+  # 搜索功能
+  search:
+    enable: true
+    provider: "simple"
+  
+  # 代码复制
+  code_copy: true
+  
+  # 阅读进度条
+  reading_progress: true
+  
+  # 回到顶部
+  back_to_top: true
+  
+  # 暗色主题
+  dark_mode: true
+  
+  # 文章字数统计
+  word_count: true
+  
+  # 阅读时间估算
+  reading_time: true
+
+# 网站功能开关
+features:
+  # 评论系统
+  comments: true
+  
+  # 分享按钮
+  share_buttons: true
+  
+  # 相关文章
+  related_posts: true
+  
+  # 文章目录
+  toc: true
+  
+  # 数学公式支持
+  mathjax: false
+  
+  # 图表支持
+  mermaid: false
+
+# 第三方服务
+services:
+  # 百度统计
+  baidu_analytics: ""
+  
+  # 不蒜子统计
+  busuanzi: true
+  
+  # 站点验证
+  google_site_verification: ""
+  baidu_site_verification: ""
+  
+  # CDN 设置
+  cdn:
+    enable: false
+    provider: "jsdelivr"
